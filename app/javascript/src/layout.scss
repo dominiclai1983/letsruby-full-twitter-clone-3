@@ -1,0 +1,23 @@
+.left-page{
+  background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+  height: 100vh !important;
+}
+
+.right-page{
+  color: white;
+  background-color: black;
+  height: 100vh !important;
+  padding-top: 15% !important;
+}
+
+/*using custom css due to sizing has no breakpoint from bootstrap */
+@media only screen and (max-width: 768px){
+  .left-page{
+    height: 75vh !important;
+  }
+  .right-page{
+    height: 75vh !important;
+    order: -1 !important;
+    padding-top: 40% !important;
+  }
+}

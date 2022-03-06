@@ -16,3 +16,6 @@
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker')
+import 'bootstrap/dist/css/bootstrap'
+import "@fortawesome/fontawesome-free/js/all";
+import $ from 'jquery';
