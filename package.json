@@ -2,7 +2,7 @@
   "name": "twitter_clone",
   "version": "1.0.0",
   "engines": {
-    "node": "14.19.0"
+    "node": "16.13.1"
   },
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
