@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
   end
 
   def signup
-    redirect_to 'home'
+    redirect_to '/home'
   end
 
   def login
