@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Nva from './page/nva';
 import Middle from './page/middle';
 import Right from './page/right';
-import {json, checkStatus} from './utils';
+import {json, checkStatus, handleErrors, safeCredentials} from './utils';
 import $ from 'jquery';
 import Dropdown from 'react-bootstrap/Dropdown';
 
@@ -114,6 +114,8 @@ class Tweet extends React.Component{
       }
     }
     $.ajax(request);
+    
+
   }
 
   //getting all tweet from API
@@ -160,7 +162,7 @@ class Tweet extends React.Component{
     })
   }
 
-  //hand delete tweet
+  //handle delete tweet
   handleDeleteTweet(id){
     if(!id){
       return;
@@ -228,7 +230,6 @@ class Tweet extends React.Component{
                 <a href="#" onClick={this.handleAllTweet} className="d-block text-dark">All Tweet</a>
                 <a href="#" onClick={this.handleUserTweet} className="d-block text-dark">Only Your Tweet</a>
               </div>
-              
               <div className='col-9 col-md-6'>
                 <Middle onSubmitTweet={this.handleTweetSubmit} />
                   {allmode? listAllTweet.map(listAllTweet => <ListAllTweet key={listAllTweet.id} listAllTweet={listAllTweet} />) : 
